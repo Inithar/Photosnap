@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { useIsMobile } from 'hooks/useIsMobile';
+import { useGetDevice } from 'hooks/useGetDevice';
 import { Wrapper } from 'styled/elements/Navigation/Wrapper';
 import { CompanyLogo } from 'styled/elements/Shared/CompanyLogo';
 import { LinksContainer } from 'styled/elements/Navigation/LinksContainer';
@@ -14,7 +14,7 @@ import { CloseIcon } from 'styled/elements/Navigation/CloseIcon';
 import { MenuIcon } from 'styled/elements/Navigation/MenuIcon';
 
 export const Navigation = () => {
-  const isMobile = useIsMobile();
+  const isMobile = useGetDevice() === 'mobile' ? true : false;
   const [isOpen, setIsOpen] = useState(false);
   const handleToggleNavigation = () => setIsOpen(!isOpen);
 

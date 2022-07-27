@@ -1,12 +1,18 @@
 import { useEffect, useState } from 'react';
 
-export const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState();
+export const useGetDevice = () => {
+  const [device, setDevice] = useState();
 
   useEffect(() => {
     const updateWindowWidth = () => {
       const currentWidth = window.innerWidth;
-      currentWidth >= 768 ? setIsMobile(false) : setIsMobile(true);
+
+      if (currentWidth < 768) return setDevice('mobile');
+
+      if (currentWidth >= 768 && currentWidth < 1440)
+        return setDevice('tablet');
+
+      if (currentWidth >= 1440) return setDevice('desktop');
     };
 
     updateWindowWidth();
@@ -15,5 +21,5 @@ export const useIsMobile = () => {
     return () => window.removeEventListener('resize', updateWindowWidth);
   }, []);
 
-  return isMobile;
+  return device;
 };
