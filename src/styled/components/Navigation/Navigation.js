@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
 import { useGetDevice } from 'hooks/useGetDevice';
-import { Wrapper } from 'styled/elements/Navigation/Wrapper';
-import { CompanyLogo } from 'styled/elements/Shared/CompanyLogo';
-import { LinksContainer } from 'styled/elements/Navigation/LinksContainer';
-import { Button } from 'styled/elements/Shared/Button';
-import { Link } from 'styled/elements/Navigation/Link';
-import { CompanyLogoWrapper } from 'styled/elements/Shared/CompanyLogoWrapper';
-import { MobileLinksContainer } from 'styled/elements/Navigation/MobileLinksContainer';
-import { Separator } from 'styled/elements/Shared/Separator';
-import { MobileContainer } from 'styled/elements/Navigation/MobileContainer';
-import { CloseIcon } from 'styled/elements/Navigation/CloseIcon';
-import { MenuIcon } from 'styled/elements/Navigation/MenuIcon';
+import { Wrapper } from 'styled/elements/navigation/Wrapper';
+import { CompanyLogo } from 'styled/elements/shared/CompanyLogo';
+import { LinksContainer } from 'styled/elements/navigation/LinksContainer';
+import { Button } from 'styled/elements/shared/Button';
+import { Link } from 'styled/elements/navigation/Link';
+import { CompanyLogoWrapper } from 'styled/elements/shared/CompanyLogoWrapper';
+import { MobileLinksContainer } from 'styled/elements/navigation/MobileLinksContainer';
+import { Separator } from 'styled/elements/shared/Separator';
+import { MobileContainer } from 'styled/elements/navigation/MobileContainer';
+import { CloseIcon } from 'styled/elements/navigation/CloseIcon';
+import { MenuIcon } from 'styled/elements/navigation/MenuIcon';
 import { VeryLightBlack } from 'styled/base/Colors';
 
 export const Navigation = () => {
@@ -65,8 +64,6 @@ export const Navigation = () => {
           Get an invite
         </Button>
       </MobileContainer>
-
-      <Outlet />
     </>
   );
 };

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Arrow } from 'styled/elements/Shared/ArrowButton/Arrow';
-import { ArrowButton } from 'styled/elements/Shared/ArrowButton/ArrowButton';
-import { Separator } from 'styled/elements/Shared/Separator';
-import { Author } from 'styled/elements/Shared/StoryCard/Author';
-import { CardContentContainer } from 'styled/elements/Shared/StoryCard/CardContentContainer';
-import { Shadow } from 'styled/elements/Shared/StoryCard/Shadow';
-import { Title } from 'styled/elements/Shared/StoryCard/Title';
-import { Wrapper } from 'styled/elements/Shared/StoryCard/Wrapper';
+import { Arrow } from 'styled/elements/shared/arrowButton/Arrow';
+import { ArrowButton } from 'styled/elements/shared/arrowButton/ArrowButton';
+import { Separator } from 'styled/elements/shared/Separator';
+import { Author } from 'styled/elements/shared/storyCard/Author';
+import { CardContentContainer } from 'styled/elements/shared/storyCard/CardContentContainer';
+import { Shadow } from 'styled/elements/shared/storyCard/Shadow';
+import { Title } from 'styled/elements/shared/storyCard/Title';
+import { Wrapper } from 'styled/elements/shared/storyCard/Wrapper';
 import { VeryLightWhiteColor, WhiteColor } from 'styled/base/Colors';
 
 export const StoryCard = ({ url, title, author }) => {
