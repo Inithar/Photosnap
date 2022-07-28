@@ -8,12 +8,14 @@ import { Shadow } from 'styled/elements/shared/storyCard/Shadow';
 import { Title } from 'styled/elements/shared/storyCard/Title';
 import { Wrapper } from 'styled/elements/shared/storyCard/Wrapper';
 import { VeryLightWhiteColor, WhiteColor } from 'styled/base/Colors';
+import { Date } from 'styled/elements/shared/storyCard/Date';
 
-export const StoryCard = ({ url, title, author }) => {
+export const StoryCard = ({ url, title, author, isDateShown, date }) => {
   return (
     <Wrapper url={url}>
       <Shadow />
       <CardContentContainer>
+        {isDateShown ? <Date>{date}</Date> : null}
         <Title>{title}</Title>
         <Author>by {author}</Author>
         <Separator color={VeryLightWhiteColor} width="calc(100% - 64px)" />

@@ -34,18 +34,21 @@ export const storyCards = [
     url: 'assets/stories/mobile/mountains.jpg',
     title: 'The Mountains',
     author: 'John Appleseed',
+    date: 'April 16th 2020',
   },
   {
     id: 2,
     url: 'assets/stories/mobile/mountains.jpg',
     title: 'The Mountains',
     author: 'John Appleseed',
+    date: 'April 14th 2020',
   },
   {
     id: 3,
     url: 'assets/stories/mobile/mountains.jpg',
     title: 'The Mountains',
     author: 'John Appleseed',
+    date: 'April 11th 2020',
   },
 ];
 
