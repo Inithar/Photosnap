@@ -8,10 +8,11 @@ import { Button } from 'styled/elements/Shared/Button';
 import { Link } from 'styled/elements/Navigation/Link';
 import { CompanyLogoWrapper } from 'styled/elements/Shared/CompanyLogoWrapper';
 import { MobileLinksContainer } from 'styled/elements/Navigation/MobileLinksContainer';
-import { Separator } from 'styled/elements/Navigation/Separator';
+import { Separator } from 'styled/elements/Shared/Separator';
 import { MobileContainer } from 'styled/elements/Navigation/MobileContainer';
 import { CloseIcon } from 'styled/elements/Navigation/CloseIcon';
 import { MenuIcon } from 'styled/elements/Navigation/MenuIcon';
+import { VeryLightBlack } from 'styled/base/Colors';
 
 export const Navigation = () => {
   const isMobile = useGetDevice() === 'mobile' ? true : false;
@@ -59,7 +60,7 @@ export const Navigation = () => {
             Pricing
           </Link>
         </MobileLinksContainer>
-        <Separator />
+        <Separator color={VeryLightBlack} />
         <Button width="100%" height="48px" fontSize={'15px'}>
           Get an invite
         </Button>
