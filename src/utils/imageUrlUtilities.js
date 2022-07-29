@@ -99,6 +99,16 @@ export const stories = {
   },
 };
 
+export const heroGraphic = {
+  moonOfAppalachia: {
+    mobile: 'assets/stories/mobile/moon-of-appalachia.jpg',
+    tablet: 'assets/stories/tablet/moon-of-appalachia.jpg',
+    desktop: 'assets/stories/desktop/moon-of-appalachia.jpg',
+  },
+};
+
 export const getPhotoUrlFromHomePage = (section, device) =>
   home[section][device];
 export const getStoryPhotoUrl = (section, device) => stories[section][device];
+export const getHeroGraphicUrl = (section, device) =>
+  heroGraphic[section][device];
