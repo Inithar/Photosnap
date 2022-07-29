@@ -5,11 +5,14 @@ import { Icon } from 'styled/elements/shared/Icon';
 import { Text } from 'styled/elements/shared/Text';
 import { LightBlackColor } from 'styled/base/Colors';
 import { ContentContainer } from 'styled/elements/shared/benefit/ContentContainer';
+import { IconContainer } from 'styled/elements/shared/benefit/IconContainer';
 
 export const Benefit = ({ src, header, description }) => {
   return (
     <Wrapper>
-      <Icon src={src} />
+      <IconContainer>
+        <Icon src={src} />
+      </IconContainer>
       <ContentContainer>
         <Header>{header}</Header>
         <Text color={LightBlackColor} align={'center'}>

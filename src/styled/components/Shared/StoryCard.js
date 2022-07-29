@@ -9,17 +9,23 @@ import { Title } from 'styled/elements/shared/storyCard/Title';
 import { Wrapper } from 'styled/elements/shared/storyCard/Wrapper';
 import { VeryLightWhiteColor, WhiteColor } from 'styled/base/Colors';
 import { Date } from 'styled/elements/shared/storyCard/Date';
+import { useGetDevice } from 'hooks/useGetDevice';
+import { getStoryPhotoUrl } from 'utils/imageUrlUtilities';
 
 export const StoryCard = ({ url, title, author, isDateShown, date }) => {
+  const device = useGetDevice();
+  const contentWidth =
+    device === 'mobile' ? 'calc(100% - 64px)' : 'calc(100% - 80px)';
+
   return (
-    <Wrapper url={url}>
+    <Wrapper url={getStoryPhotoUrl(url, device)}>
       <Shadow />
       <CardContentContainer>
         {isDateShown ? <Date>{date}</Date> : null}
         <Title>{title}</Title>
         <Author>by {author}</Author>
-        <Separator color={VeryLightWhiteColor} width="calc(100% - 64px)" />
-        <ArrowButton color={WhiteColor} width="calc(100% - 64px)">
+        <Separator color={VeryLightWhiteColor} width={contentWidth} />
+        <ArrowButton color={WhiteColor} width={contentWidth}>
           Read stroy <Arrow color="white" marginLeft="auto" />
         </ArrowButton>
       </CardContentContainer>

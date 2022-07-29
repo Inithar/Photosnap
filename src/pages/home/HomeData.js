@@ -7,6 +7,7 @@ export const infoBoxesData = [
     description:
       'Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.',
     buttonText: 'Get an invite',
+    isRight: true,
   },
   {
     isBlack: false,
@@ -16,6 +17,7 @@ export const infoBoxesData = [
     description:
       'We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone',
     buttonText: 'View the stories',
+    isRight: false,
   },
   {
     isBlack: false,
@@ -25,30 +27,38 @@ export const infoBoxesData = [
     description:
       'Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it.',
     buttonText: 'View the stories',
+    isRight: true,
   },
 ];
 
 export const storyCards = [
   {
     id: 1,
-    url: 'assets/stories/mobile/mountains.jpg',
+    url: 'mountains',
     title: 'The Mountains',
     author: 'John Appleseed',
     date: 'April 16th 2020',
   },
   {
     id: 2,
-    url: 'assets/stories/mobile/mountains.jpg',
-    title: 'The Mountains',
-    author: 'John Appleseed',
+    url: 'cityscapes',
+    title: 'Sunset Cityscapes',
+    author: 'Benjamin Cruz',
     date: 'April 14th 2020',
   },
   {
     id: 3,
-    url: 'assets/stories/mobile/mountains.jpg',
-    title: 'The Mountains',
-    author: 'John Appleseed',
+    url: 'daysVoyage',
+    title: '18 Days Voyage',
+    author: 'by Alexei Borodin',
     date: 'April 11th 2020',
+  },
+  {
+    id: 4,
+    url: 'architecturals',
+    title: 'Architecturals',
+    author: 'Samantha Brooke',
+    date: 'April 9th 2020',
   },
 ];
 

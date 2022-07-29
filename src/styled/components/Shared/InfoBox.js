@@ -2,7 +2,7 @@ import React from 'react';
 import { useGetDevice } from 'hooks/useGetDevice';
 import { Wrapper } from 'styled/elements/shared/infoBox/Wrapper';
 import { Image } from 'styled/elements/shared/Image';
-import { getUrlFromHomePage } from 'utils/imageUrlUtilities';
+import { getPhotoUrlFromHomePage } from 'utils/imageUrlUtilities';
 import { ContentContainer } from 'styled/elements/shared/infoBox/ContentContainer';
 import { MainHeader } from 'styled/elements/shared/MainHeader';
 import {
@@ -22,10 +22,15 @@ export const InfoBox = ({
   header,
   description,
   buttonText,
+  isRight,
 }) => {
   return (
     <Wrapper>
-      <Image src={getUrlFromHomePage(src, useGetDevice())} alt={alt} />
+      <Image
+        src={getPhotoUrlFromHomePage(src, useGetDevice())}
+        alt={alt}
+        isRight={isRight}
+      />
       <ContentContainer color={isBlack ? BlackColor : WhiteColor}>
         <MainHeader color={isBlack ? WhiteColor : BlackColor}>
           {header}

@@ -9,10 +9,10 @@ export const useGetDevice = () => {
 
       if (currentWidth < 768) return setDevice('mobile');
 
-      if (currentWidth >= 768 && currentWidth < 1440)
+      if (currentWidth >= 768 && currentWidth < 1200)
         return setDevice('tablet');
 
-      if (currentWidth >= 1440) return setDevice('desktop');
+      if (currentWidth >= 1200) return setDevice('desktop');
     };
 
     updateWindowWidth();
