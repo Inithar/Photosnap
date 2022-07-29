@@ -7,9 +7,9 @@ import { LightBlackColor } from 'styled/base/Colors';
 import { ContentContainer } from 'styled/elements/shared/benefit/ContentContainer';
 import { IconContainer } from 'styled/elements/shared/benefit/IconContainer';
 
-export const Benefit = ({ src, header, description }) => {
+export const Benefit = ({ src, header, description, page }) => {
   return (
-    <Wrapper>
+    <Wrapper page={page}>
       <IconContainer>
         <Icon src={src} />
       </IconContainer>

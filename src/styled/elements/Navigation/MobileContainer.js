@@ -3,7 +3,7 @@ import { WhiteColor } from 'styled/base/Colors';
 
 export const MobileContainer = styled.div`
   position: absolute;
-  top: 72px;
+  top: 70px;
   padding: 32px;
   width: 100%;
   background-color: ${WhiteColor};

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'styled/base/Responsive';
 
 export const ArrowButton = styled.button`
   display: flex;
@@ -12,4 +13,8 @@ export const ArrowButton = styled.button`
   text-transform: uppercase;
   color: ${({ color }) => color};
   background-color: transparent;
+
+  ${device.tablet} {
+    justify-content: ${({ justify }) => justify || 'flex-start'};
+  }
 `;

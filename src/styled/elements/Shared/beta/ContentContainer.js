@@ -2,14 +2,11 @@ import styled from 'styled-components';
 import { device } from 'styled/base/Responsive';
 
 export const ContentContainer = styled.div`
-  margin: 48px 0 56px;
+  width: 100%;
+  z-index: 3;
 
   ${device.tablet} {
-    margin: 66px 0 80px;
-    height: 116px;
-  }
-
-  ${device.smallDesktop} {
-    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
   }
 `;

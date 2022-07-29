@@ -1,4 +1,4 @@
-export const home = {
+export const infoCards = {
   beautifulStories: {
     mobile: 'assets/home/mobile/beautiful-stories.jpg',
     tablet: 'assets/home/tablet/beautiful-stories.jpg',
@@ -13,6 +13,11 @@ export const home = {
     mobile: 'assets/home/mobile/designed-for-everyone.jpg',
     tablet: 'assets/home/tablet/designed-for-everyone.jpg',
     desktop: 'assets/home/desktop/designed-for-everyone.jpg',
+  },
+  features: {
+    mobile: 'assets/features/mobile/hero.jpg',
+    tablet: 'assets/features/tablet/hero.jpg',
+    desktop: 'assets/features/desktop/hero.jpg',
   },
 };
 
@@ -105,10 +110,17 @@ export const heroGraphic = {
     tablet: 'assets/stories/tablet/moon-of-appalachia.jpg',
     desktop: 'assets/stories/desktop/moon-of-appalachia.jpg',
   },
+  beta: {
+    mobile: 'assets/shared/mobile/bg-beta.jpg',
+    tablet: 'assets/shared/tablet/bg-beta.jpg',
+    desktop: 'assets/shared/desktop/bg-beta.jpg',
+  },
 };
 
-export const getPhotoUrlFromHomePage = (section, device) =>
-  home[section][device];
+export const getInfoCardPhotoUrl = (section, device) =>
+  infoCards[section][device];
+
 export const getStoryPhotoUrl = (section, device) => stories[section][device];
+
 export const getHeroGraphicUrl = (section, device) =>
   heroGraphic[section][device];

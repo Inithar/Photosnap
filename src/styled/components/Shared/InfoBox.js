@@ -2,7 +2,7 @@ import React from 'react';
 import { useGetDevice } from 'hooks/useGetDevice';
 import { Wrapper } from 'styled/elements/shared/infoBox/Wrapper';
 import { Image } from 'styled/elements/shared/Image';
-import { getPhotoUrlFromHomePage } from 'utils/imageUrlUtilities';
+import { getInfoCardPhotoUrl } from 'utils/imageUrlUtilities';
 import { ContentContainer } from 'styled/elements/shared/infoBox/ContentContainer';
 import { MainHeader } from 'styled/elements/shared/MainHeader';
 import {
@@ -23,25 +23,32 @@ export const InfoBox = ({
   description,
   buttonText,
   isRight,
+  isButtonShown,
+  minHeight,
 }) => {
   return (
     <Wrapper>
       <Image
-        src={getPhotoUrlFromHomePage(src, useGetDevice())}
+        src={getInfoCardPhotoUrl(src, useGetDevice())}
         alt={alt}
         isRight={isRight}
       />
-      <ContentContainer color={isBlack ? BlackColor : WhiteColor}>
+      <ContentContainer
+        color={isBlack ? BlackColor : WhiteColor}
+        minHeight={minHeight}
+      >
         <MainHeader color={isBlack ? WhiteColor : BlackColor}>
           {header}
         </MainHeader>
         <Text align="left" color={isBlack ? LightWhiteColor : LightBlackColor}>
           {description}
         </Text>
-        <ArrowButton color={isBlack ? WhiteColor : BlackColor}>
-          {buttonText}
-          <Arrow color={isBlack ? 'white' : 'black'} marginLeft="18px" />
-        </ArrowButton>
+        {isButtonShown ? (
+          <ArrowButton color={isBlack ? WhiteColor : BlackColor}>
+            {buttonText}
+            <Arrow color={isBlack ? 'white' : 'black'} marginLeft="18px" />
+          </ArrowButton>
+        ) : null}
       </ContentContainer>
     </Wrapper>
   );

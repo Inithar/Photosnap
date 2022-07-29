@@ -42,8 +42,8 @@ export const Footer = () => {
         </NavigationLinksContainer>
       </LinksContainer>
       <Container>
-        <ArrowButton width="182px" color={WhiteColor}>
-          Get an invite <Arrow marginLeft="22px" color="white" />
+        <ArrowButton width="182px" color={WhiteColor} justify="flex-end">
+          Get an invite <Arrow marginLeft="16px" color="white" />
         </ArrowButton>
         <CopyrightText>
           Copyright {currentYear}. All Rights Reserved

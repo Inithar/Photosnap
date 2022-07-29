@@ -7,7 +7,7 @@ export const ContentContainer = styled.div`
   justify-content: center;
   padding: 72px 33px;
   width: 100%;
-  min-height: 420px;
+  min-height: ${({ minHeight }) => minHeight};
   background-color: ${({ color }) => color};
 
   ${device.tablet} {

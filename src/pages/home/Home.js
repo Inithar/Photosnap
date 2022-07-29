@@ -10,7 +10,7 @@ export const Home = () => {
   return (
     <>
       {infoBoxesData.map((infoBoxData, index) => (
-        <InfoBox {...infoBoxData} key={index} />
+        <InfoBox {...infoBoxData} key={index} minHeight="420px" />
       ))}
       <StoryCardsContainer>
         {storyCards.map((storyCard) => (

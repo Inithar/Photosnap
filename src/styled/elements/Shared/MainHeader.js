@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'styled/base/Responsive';
 
 export const MainHeader = styled.h2`
   margin: 0;
@@ -8,4 +9,10 @@ export const MainHeader = styled.h2`
   text-transform: uppercase;
   font-weight: bold;
   color: ${({ color }) => color};
+
+  ${device.tablet} {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 4px;
+  }
 `;

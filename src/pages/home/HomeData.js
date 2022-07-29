@@ -6,6 +6,7 @@ export const infoBoxesData = [
     header: 'Create and share your photo stories.',
     description:
       'Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.',
+    isButtonShown: true,
     buttonText: 'Get an invite',
     isRight: true,
   },
@@ -16,6 +17,7 @@ export const infoBoxesData = [
     header: 'Beautiful stories every time',
     description:
       'We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone',
+    isButtonShown: true,
     buttonText: 'View the stories',
     isRight: false,
   },
@@ -26,6 +28,7 @@ export const infoBoxesData = [
     header: 'Designed for everyone',
     description:
       'Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it.',
+    isButtonShown: true,
     buttonText: 'View the stories',
     isRight: true,
   },

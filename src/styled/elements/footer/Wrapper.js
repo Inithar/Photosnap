@@ -11,8 +11,12 @@ export const Wrapper = styled.div`
     display: flex;
   }
 
+  ${device.smallDesktop} {
+    padding: 64px 120px;
+  }
+
   ${device.desktop} {
-    padding: 64px 171px;
+    padding: 64px 165px;
     display: flex;
   }
 `;
