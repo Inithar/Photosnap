@@ -9,6 +9,7 @@ export const MainHeader = styled.h2`
   text-transform: uppercase;
   font-weight: bold;
   color: ${({ color }) => color};
+  text-align: ${({ align }) => align || 'start'};
 
   ${device.tablet} {
     font-size: 40px;

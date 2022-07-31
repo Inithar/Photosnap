@@ -6,6 +6,7 @@ import { Wrapper } from 'styled/elements/pricing/Wrapper';
 import { infoBoxData } from './PricingData';
 import { pricingCards } from 'pages/pricing/PricingData';
 import { PricingCardsContainer } from 'styled/elements/pricing/PricingCardsContainer';
+import { CompareTable } from 'styled/components/pricing/CompareTable';
 
 export const Pricing = () => (
   <>
@@ -16,6 +17,7 @@ export const Pricing = () => (
           <Card {...card} key={index} />
         ))}
       </PricingCardsContainer>
+      <CompareTable />
     </Wrapper>
     <Beta />
   </>

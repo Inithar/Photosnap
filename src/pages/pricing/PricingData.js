@@ -36,3 +36,54 @@ export const pricingCards = [
     isDark: false,
   },
 ];
+
+export const comparedFeatures = [
+  {
+    featureName: 'unlimited story posting',
+    basic: true,
+    pro: true,
+    business: true,
+  },
+  {
+    featureName: 'unlimited photo upload',
+    basic: true,
+    pro: true,
+    business: true,
+  },
+  {
+    featureName: 'unlimited custom content',
+    basic: false,
+    pro: true,
+    business: true,
+  },
+  {
+    featureName: 'customize metadata',
+    basic: false,
+    pro: true,
+    business: true,
+  },
+  {
+    featureName: 'advanced metrics',
+    basic: false,
+    pro: false,
+    business: true,
+  },
+  {
+    featureName: 'photo downloads',
+    basic: false,
+    pro: false,
+    business: true,
+  },
+  {
+    featureName: 'search engine indexing',
+    basic: false,
+    pro: false,
+    business: true,
+  },
+  {
+    featureName: 'custom analytics',
+    basic: false,
+    pro: false,
+    business: true,
+  },
+];

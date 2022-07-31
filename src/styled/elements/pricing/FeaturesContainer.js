@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import { device } from 'styled/base/Responsive';
 
-export const PricingCardsContainer = styled.div`
+export const FeaturesContainer = styled.div`
+  margin-top: 64px;
+
   ${device.tablet} {
-    margin-bottom: 112px;
+    margin: 64px auto 0;
+    max-width: 731px;
   }
 
   ${device.smallDesktop} {
-    display: flex;
-    margin-bottom: 160px;
+    margin-top: 56px;
   }
 `;
