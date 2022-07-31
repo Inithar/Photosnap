@@ -19,6 +19,11 @@ export const infoCards = {
     tablet: 'assets/features/tablet/hero.jpg',
     desktop: 'assets/features/desktop/hero.jpg',
   },
+  pricing: {
+    mobile: 'assets/pricing/mobile/hero.jpg',
+    tablet: 'assets/pricing/tablet/hero.jpg',
+    desktop: 'assets/pricing/desktop/hero.jpg',
+  },
 };
 
 export const stories = {

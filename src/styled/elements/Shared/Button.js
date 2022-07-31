@@ -9,6 +9,6 @@ export const Button = styled.button`
   letter-spacing: 2px;
   font-weight: bold;
   text-transform: uppercase;
-  color: ${WhiteColor};
-  background-color: ${BlackColor};
+  color: ${({ isDark }) => (isDark ? WhiteColor : BlackColor)};
+  background-color: ${({ isDark }) => (isDark ? BlackColor : WhiteColor)};
 `;

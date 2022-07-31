@@ -40,7 +40,7 @@ export const Navigation = () => {
               <Link to={'/features'}>Features</Link>
               <Link to={'/pricing'}>Pricing</Link>
             </LinksContainer>
-            <Button width="158px" height="40px" fontSize={'12px'}>
+            <Button isDark width="158px" height="40px" fontSize={'12px'}>
               Get an invite
             </Button>
           </>
@@ -60,7 +60,7 @@ export const Navigation = () => {
           </Link>
         </MobileLinksContainer>
         <Separator color={VeryLightBlack} />
-        <Button width="100%" height="48px" fontSize={'15px'}>
+        <Button isDark width="100%" height="48px" fontSize={'15px'}>
           Get an invite
         </Button>
       </MobileContainer>
