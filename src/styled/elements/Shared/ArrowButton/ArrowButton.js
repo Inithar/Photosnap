@@ -14,6 +14,12 @@ export const ArrowButton = styled.button`
   color: ${({ color }) => color};
   background-color: transparent;
 
+  &:hover {
+    text-decoration: ${({ isDecorated }) =>
+      isDecorated ? 'underline' : 'none'};
+    color: ${({ color }) => color};
+  }
+
   ${device.tablet} {
     justify-content: ${({ justify }) => justify || 'flex-start'};
   }

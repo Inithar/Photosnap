@@ -12,6 +12,11 @@ export const Link = styled(NavLink)`
   text-transform: uppercase;
   color: ${WhiteColor};
   text-decoration: none;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.3;
+  }
 
   ${device.tablet} {
     margin-left: 26px;

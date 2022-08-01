@@ -20,7 +20,10 @@ export const HeroGraphic = () => (
   <Wrapper>
     <ImageContainer>
       <Shadow />
-      <Image src={getHeroGraphicUrl('moonOfAppalachia', useGetDevice())} />
+      <Image
+        src={getHeroGraphicUrl('moonOfAppalachia', useGetDevice())}
+        alt="landscape of beautiful mountains"
+      />
     </ImageContainer>
     <ContentContainer>
       <SmallHeader>Last month's featured story</SmallHeader>
@@ -37,7 +40,7 @@ export const HeroGraphic = () => (
         Kentucky and West Virginia, and while the ridges are not high, the
         terrain is extremely rugged.
       </Text>
-      <ArrowButton color={WhiteColor} marginTop="24px">
+      <ArrowButton color={WhiteColor} marginTop="24px" isDecorated>
         Read the story <Arrow color="white" marginLeft="16px" />
       </ArrowButton>
     </ContentContainer>

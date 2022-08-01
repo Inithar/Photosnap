@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { LinksContainer } from 'styled/elements/footer/LinksContainer';
 import { SocialMediaContainer } from 'styled/elements/footer/SocialMediaContainer';
 import { Wrapper } from 'styled/elements/footer/Wrapper';
@@ -12,6 +13,7 @@ import { ArrowButton } from 'styled/elements/shared/arrowButton/ArrowButton';
 import { Arrow } from 'styled/elements/shared/arrowButton/Arrow';
 import { WhiteColor } from 'styled/base/Colors';
 import { CopyrightText } from 'styled/elements/footer/CopyrightText';
+
 import facebookIcon from 'assets/shared/desktop/facebook.svg';
 import youtubeIcon from 'assets/shared/desktop/youtube.svg';
 import twitterIcon from 'assets/shared/desktop/twitter.svg';
@@ -42,7 +44,12 @@ export const Footer = () => {
         </NavigationLinksContainer>
       </LinksContainer>
       <Container>
-        <ArrowButton width="182px" color={WhiteColor} justify="flex-end">
+        <ArrowButton
+          width="182px"
+          color={WhiteColor}
+          justify="flex-end"
+          isDecorated
+        >
           Get an invite <Arrow marginLeft="16px" color="white" />
         </ArrowButton>
         <CopyrightText>

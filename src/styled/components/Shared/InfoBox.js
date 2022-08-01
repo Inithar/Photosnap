@@ -5,15 +5,16 @@ import { Image } from 'styled/elements/shared/Image';
 import { getInfoCardPhotoUrl } from 'utils/imageUrlUtilities';
 import { ContentContainer } from 'styled/elements/shared/infoBox/ContentContainer';
 import { MainHeader } from 'styled/elements/shared/MainHeader';
+import { Text } from 'styled/elements/shared/Text';
+import { ArrowButton } from 'styled/elements/shared/arrowButton/ArrowButton';
+import { Arrow } from 'styled/elements/shared/arrowButton/Arrow';
 import {
   BlackColor,
   WhiteColor,
   LightBlackColor,
   LightWhiteColor,
 } from 'styled/base/Colors';
-import { Text } from 'styled/elements/shared/Text';
-import { ArrowButton } from 'styled/elements/shared/arrowButton/ArrowButton';
-import { Arrow } from 'styled/elements/shared/arrowButton/Arrow';
+import { DecorationLine } from 'styled/elements/home/DecorationLine';
 
 export const InfoBox = ({
   isBlack,
@@ -25,6 +26,7 @@ export const InfoBox = ({
   isRight,
   isButtonShown,
   minHeight,
+  isDecorated,
 }) => {
   return (
     <Wrapper>
@@ -43,12 +45,13 @@ export const InfoBox = ({
         <Text align="left" color={isBlack ? LightWhiteColor : LightBlackColor}>
           {description}
         </Text>
-        {isButtonShown ? (
-          <ArrowButton color={isBlack ? WhiteColor : BlackColor}>
+        {isButtonShown && (
+          <ArrowButton color={isBlack ? WhiteColor : BlackColor} isDecorated>
             {buttonText}
             <Arrow color={isBlack ? 'white' : 'black'} marginLeft="18px" />
           </ArrowButton>
-        ) : null}
+        )}
+        {isDecorated && <DecorationLine />}
       </ContentContainer>
     </Wrapper>
   );

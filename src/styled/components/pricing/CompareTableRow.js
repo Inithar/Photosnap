@@ -19,16 +19,16 @@ export const CompareTableRow = ({ featureName, basic, pro, business }) => {
         <Header marginLeft="24px">{featureName}</Header>
         <TypesContainer>
           <OptionContainer>
-            {isMobile ? <Type>Basic</Type> : null}
-            {basic ? <Icon src={checkIcon} /> : null}
+            {isMobile && <Type>Basic</Type>}
+            {basic && <Icon src={checkIcon} />}
           </OptionContainer>
           <OptionContainer>
-            {isMobile ? <Type>Pro</Type> : null}
-            {pro ? <Icon src={checkIcon} /> : null}
+            {isMobile && <Type>Pro</Type>}
+            {pro && <Icon src={checkIcon} />}
           </OptionContainer>
           <OptionContainer>
-            {isMobile ? <Type>Business</Type> : null}
-            {business ? <Icon src={checkIcon} /> : null}
+            {isMobile && <Type>Business</Type>}
+            {business && <Icon src={checkIcon} />}
           </OptionContainer>
         </TypesContainer>
       </FeatureContainer>

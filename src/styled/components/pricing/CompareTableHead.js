@@ -7,7 +7,7 @@ import { TableHeadTypesContainer } from 'styled/elements/pricing/compare/TableHe
 export const CompareTableHead = () => (
   <TableHeadContainer>
     <Header marginLeft="24px">The features</Header>
-    {useGetDevice() === 'mobile' ? null : (
+    {useGetDevice() !== 'mobile' && (
       <TableHeadTypesContainer>
         <Header width="33.3%" align="center">
           Basic

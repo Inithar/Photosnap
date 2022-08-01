@@ -6,4 +6,5 @@ export const Icon = styled.img.attrs(({ src }) => ({
   margin-right: ${({ marginRight }) => marginRight || '0'};
   width: ${({ width }) => width || 'auto'};
   height: ${({ height }) => height || 'auto'};
+  cursor: pointer;
 `;

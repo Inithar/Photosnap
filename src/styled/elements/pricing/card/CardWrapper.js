@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { VeryLightGrayColor, BlackColor } from 'styled/base/Colors';
+import { VeryLightGrayColor, BlackColor, MainColor } from 'styled/base/Colors';
 import { device } from 'styled/base/Responsive';
 
 export const CardWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,9 +16,26 @@ export const CardWrapper = styled.div`
     margin-bottom: 0;
   }
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: ${MainColor};
+    z-index: 10;
+    visibility: ${({ isDark }) => (isDark ? 'visible' : 'hidden')};
+  }
+
   ${device.tablet} {
     padding: 40px;
     align-items: flex-start;
+
+    &::after {
+      width: 6px;
+      height: 100%;
+    }
   }
 
   ${device.smallDesktop} {
@@ -29,5 +47,10 @@ export const CardWrapper = styled.div`
     padding: 56px 40px 40px;
     align-items: center;
     height: ${({ isDark }) => (isDark ? '480px' : '420px')};
+
+    &::after {
+      width: 100%;
+      height: 6px;
+    }
   }
 `;

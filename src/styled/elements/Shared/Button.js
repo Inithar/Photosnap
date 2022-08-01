@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BlackColor, WhiteColor } from 'styled/base/Colors';
+import { BlackColor, WhiteColor, LightGrayColor } from 'styled/base/Colors';
 
 export const Button = styled.button`
   width: ${({ width }) => width};
@@ -11,4 +11,9 @@ export const Button = styled.button`
   text-transform: uppercase;
   color: ${({ isDark }) => (isDark ? WhiteColor : BlackColor)};
   background-color: ${({ isDark }) => (isDark ? BlackColor : WhiteColor)};
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: ${LightGrayColor};
+  }
 `;

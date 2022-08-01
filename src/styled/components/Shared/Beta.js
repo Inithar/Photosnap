@@ -21,6 +21,7 @@ export const Beta = () => (
         marginTop="24px"
         justify="flex-end"
         width={'125%'}
+        isDecorated
       >
         Get an invite <Arrow color="white" marginLeft="16px" />
       </ArrowButton>

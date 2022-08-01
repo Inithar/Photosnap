@@ -22,11 +22,11 @@ export const StoryCard = ({ url, title, author, isDateShown, date }) => {
     <Wrapper url={getStoryPhotoUrl(url, device)}>
       <Shadow />
       <CardContentContainer>
-        {isDateShown ? (
+        {isDateShown && (
           <StoryDate marginBottom="4px" color={LightGrayColor}>
             {date}
           </StoryDate>
-        ) : null}
+        )}
         <Title>{title}</Title>
         <Author marginTop="4px" marginBottom="16px">
           by {author}
