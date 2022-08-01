@@ -14,6 +14,8 @@ export const Header = styled.p`
   color: ${BlackColor};
 
   ${device.tablet} {
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: ${({ marginLeft }) => (marginLeft ? marginLeft : '0')};
   }
 `;

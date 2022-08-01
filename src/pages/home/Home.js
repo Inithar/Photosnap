@@ -4,9 +4,11 @@ import { InfoBox } from 'styled/components/shared/InfoBox';
 import { StoryCard } from 'styled/components/shared/StoryCard';
 import { BenefitsContainer } from 'styled/elements/home/BenefitsContainer';
 import { StoryCardsContainer } from 'styled/elements/shared/StoryCardsContainer';
-import { infoBoxesData, storyCards, benefits } from './HomeData';
+import home from '../../data/home.json';
 
 export const Home = () => {
+  const { infoBoxesData, storyCards, benefits } = home;
+
   return (
     <>
       {infoBoxesData.map((infoBoxData, index) => (
