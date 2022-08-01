@@ -6,13 +6,17 @@ import { Wrapper } from 'styled/elements/pricing/Wrapper';
 import { PricingCardsContainer } from 'styled/elements/pricing/PricingCardsContainer';
 import { CompareTable } from 'styled/components/pricing/CompareTable';
 import pricing from '../../data/pricing.json';
+import { PayOffPeriod } from 'styled/components/pricing/PayOffPeriod';
+import { PricingContext } from 'context/PricingContext';
 
 export const Pricing = () => {
   const { infoBoxData, pricingCards } = pricing;
+
   return (
-    <>
+    <PricingContext>
       <InfoBox {...infoBoxData} />
       <Wrapper>
+        <PayOffPeriod />
         <PricingCardsContainer>
           {pricingCards.map((card, index) => (
             <Card {...card} key={index} />
@@ -21,6 +25,6 @@ export const Pricing = () => {
         <CompareTable />
       </Wrapper>
       <Beta />
-    </>
+    </PricingContext>
   );
 };

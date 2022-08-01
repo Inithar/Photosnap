@@ -23,11 +23,11 @@ export const Wrapper = styled.div`
   }
 
   ${device.smallDesktop} {
-    &:nth-child(1) {
+    &:nth-child(1),
+    &:nth-child(2) {
       margin-right: 30px;
     }
 
-    &:nth-child(2),
     &:nth-child(4),
     &:nth-child(5) {
       margin-right: ${({ page }) => (page === 'features' ? '30px' : '0')};

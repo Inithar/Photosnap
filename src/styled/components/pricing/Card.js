@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PricingState } from 'context/PricingContext';
 import { CardWrapper } from 'styled/elements/pricing/card/CardWrapper';
 import { Container } from 'styled/elements/pricing/card/Container';
 import { DescriptionContainer } from 'styled/elements/pricing/card/DescriptionContainer';
@@ -17,27 +18,35 @@ export const Card = ({
   pricePerMonth,
   pricePerYear,
   isDark,
-}) => (
-  <CardWrapper isDark={isDark}>
-    <Container>
-      <DescriptionContainer>
-        <PricingType isDark={isDark}>{type}</PricingType>
-        <Text color={isDark ? LightWhiteColor : LightBlackColor}>
-          {description}
-        </Text>
-      </DescriptionContainer>
-      <PriceContainer>
-        <Price isDark={isDark}>${pricePerMonth}</Price>
-        <Every isDark={isDark}>per month</Every>
-      </PriceContainer>
-    </Container>
-    <Button
-      isDark={!isDark}
-      width={useGetDevice() === 'mobile' ? '240px' : '270px'}
-      height="40px"
-      fontSize="12px"
-    >
-      Pick plan
-    </Button>
-  </CardWrapper>
-);
+}) => {
+  const { period } = useContext(PricingState);
+
+  return (
+    <CardWrapper isDark={isDark}>
+      <Container>
+        <DescriptionContainer>
+          <PricingType isDark={isDark}>{type}</PricingType>
+          <Text color={isDark ? LightWhiteColor : LightBlackColor}>
+            {description}
+          </Text>
+        </DescriptionContainer>
+        <PriceContainer>
+          <Price isDark={isDark}>
+            ${period === 'monthly' ? pricePerMonth : pricePerYear}
+          </Price>
+          <Every isDark={isDark}>
+            {period === 'monthly' ? 'per month' : 'per year'}
+          </Every>
+        </PriceContainer>
+      </Container>
+      <Button
+        isDark={!isDark}
+        width={useGetDevice() === 'mobile' ? '240px' : '270px'}
+        height="40px"
+        fontSize="12px"
+      >
+        Pick plan
+      </Button>
+    </CardWrapper>
+  );
+};
