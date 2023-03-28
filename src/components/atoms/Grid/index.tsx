@@ -20,7 +20,7 @@ interface GridPops extends React.HTMLAttributes<HTMLDivElement> {
   alignItems?: 'flex-start' | 'center' | 'flex-end';
 }
 
-const Grid = ({ children, container, item, xs, sm, md, lg, xl, xxl, spacing, justifyContent, alignItems, ...props }: GridPops) => {
+const Grid = ({ children, container, item, xs, sm, md, lg, xl, xxl, spacing = 'md', justifyContent, alignItems, ...props }: GridPops) => {
   const cx = classNames.bind(styles);
 
   const className = cx(props.className, {
@@ -38,7 +38,7 @@ const Grid = ({ children, container, item, xs, sm, md, lg, xl, xxl, spacing, jus
   });
 
   return (
-    <div className={className} {...props}>
+    <div {...props} className={className}>
       {children}
     </div>
   );
