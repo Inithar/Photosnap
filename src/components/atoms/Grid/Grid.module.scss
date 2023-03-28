@@ -1,0 +1,63 @@
+@use '../../../scss/mixins';
+
+$spacing: (
+  'sm': 0.5rem,
+  'md': 1rem,
+  'lg': 1.5rem
+);
+
+$justify_content: (flex-start, flex-end, center, space-between);
+$align_items: (flex-start, flex-end, center);
+
+$breakpoints: map-keys(
+  $map: mixins.$breakpoints
+);
+
+.grid {
+  &_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    display: block;
+  }
+
+  @for $i from 1 through 12 {
+    &_xs_#{$i} {
+      flex-basis: calc($i/12 * 100%);
+    }
+  }
+
+  @each $breakpoint in $breakpoints {
+    @include mixins.breakpoint($breakpoint) {
+      @for $i from 1 through 12 {
+        &_#{$breakpoint}_#{$i} {
+          flex-basis: calc($i/12 * 100%);
+        }
+      }
+    }
+  }
+
+  @each $name, $value in $spacing {
+    &_spacing_#{$name} {
+      margin: -$value;
+    }
+
+    &_spacing_#{$name} > &_item {
+      padding: $value;
+    }
+  }
+
+  @each $value in $justify_content {
+    &_justify_content_#{$value} {
+      justify-content: $value;
+    }
+  }
+
+  @each $value in $align_items {
+    &_align_items_#{$value} {
+      align-items: $value;
+    }
+  }
+}
