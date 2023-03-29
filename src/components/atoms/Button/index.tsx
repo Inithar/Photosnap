@@ -22,7 +22,7 @@ const Button = ({ children, variant = 'arrow', theme = 'primary', ...props }: Bu
   return (
     <button {...props} className={className}>
       {children}
-      {variant === 'arrow' && <img src={`./assets/icons/arrow-right-${theme === 'primary' ? 'black' : 'white'}.svg `} />}
+      {variant === 'arrow' && <img src={`./assets/icons/arrow-right-${theme === 'primary' ? 'black' : 'white'}.svg `} alt="arrow icon" />}
     </button>
   );
 };
