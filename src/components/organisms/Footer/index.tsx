@@ -8,7 +8,7 @@ import Button from '../../atoms/Button';
 import NavLink from '../../atoms/NavLink';
 
 const Footer = () => (
-  <div className={styles.container}>
+  <footer className={styles.footer}>
     <Wrapper>
       <div className={styles.left_section}>
         <img src="./assets/shared/desktop/logo-white.svg" alt="Photosnap" />
@@ -38,7 +38,7 @@ const Footer = () => (
         <p>Copyright {new Date().getFullYear()}. All Rights Reserved</p>
       </div>
     </Wrapper>
-  </div>
+  </footer>
 );
 
 export default Footer;
