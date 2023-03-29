@@ -9,7 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'arrow';
 }
 
-const Button = ({ children, variant = 'arrow', theme = 'primary', ...props }: ButtonProps) => {
+const Button = ({ children, variant = 'default', theme = 'primary', ...props }: ButtonProps) => {
   const cx = classNames.bind(styles);
 
   const className = cx(props.className, 'btn', {

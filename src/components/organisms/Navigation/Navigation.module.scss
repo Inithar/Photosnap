@@ -1,0 +1,94 @@
+@use '../../../scss/mixins';
+
+.container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--pure-white);
+
+  & > div {
+    max-width: 119rem;
+  }
+}
+
+.separator {
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--pure-black);
+  opacity: 0.25;
+
+  @include mixins.breakpoint('md') {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.8rem 2.8rem 2.8rem 2.4rem;
+
+  @include mixins.breakpoint('md') {
+    padding: 1.6rem 4rem;
+  }
+
+  & > img {
+    cursor: pointer;
+  }
+
+  & > div {
+    position: absolute;
+    top: 7.2rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3.2rem;
+    width: 100%;
+    background-color: var(--pure-white);
+    transform: translateX(100%);
+    transition: transform 0.5s;
+
+    a {
+      font-size: 1.5rem;
+      color: var(--pure-black);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.25rem;
+      text-decoration: none;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+
+    @include mixins.breakpoint('md') {
+      position: static;
+      flex-direction: row;
+      justify-content: center;
+      gap: 3.7rem;
+      padding: 0;
+      transform: translateX(0);
+      width: auto;
+
+      a {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+
+  .open {
+    transform: translateX(0%);
+  }
+}

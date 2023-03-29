@@ -1,0 +1,16 @@
+{
+  "links": [
+    {
+      "text": "stories",
+      "to": "/stories"
+    },
+    {
+      "text": "features",
+      "to": "/features"
+    },
+    {
+      "text": "pricing",
+      "to": "/pricing"
+    }
+  ]
+}
