@@ -1,5 +1,45 @@
 {
-  "links": [
+  "navLinks": [
+    {
+      "text": "stories",
+      "to": "/stories"
+    },
+    {
+      "text": "features",
+      "to": "/features"
+    },
+    {
+      "text": "pricing",
+      "to": "/pricing"
+    }
+  ],
+  "footerIcons": [
+    {
+      "to": "https://www.facebook.com/",
+      "icon": "./assets/shared/desktop/facebook.svg"
+    },
+    {
+      "to": "https://www.youtube.com/",
+      "icon": "./assets/shared/desktop/youtube.svg"
+    },
+    {
+      "to": "https://twitter.com/",
+      "icon": "./assets/shared/desktop/twitter.svg"
+    },
+    {
+      "to": "https://www.pinterest.com/",
+      "icon": "./assets/shared/desktop/pinterest.svg"
+    },
+    {
+      "to": "https://www.instagram.com/",
+      "icon": "./assets/shared/desktop/instagram.svg"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "home",
+      "to": "/"
+    },
     {
       "text": "stories",
       "to": "/stories"

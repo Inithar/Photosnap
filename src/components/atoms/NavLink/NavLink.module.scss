@@ -1,0 +1,13 @@
+.link {
+  color: var(--pure-white);
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.3;
+  }
+}

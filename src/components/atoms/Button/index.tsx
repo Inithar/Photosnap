@@ -22,7 +22,7 @@ const Button = ({ children, variant = 'default', theme = 'primary', ...props }: 
   return (
     <button {...props} className={className}>
       {children}
-      {variant === 'arrow' && <img src={`./assets/icons/arrow-right-${theme === 'primary' ? 'black' : 'white'}.svg `} alt="arrow icon" />}
+      {variant === 'arrow' && <img src={`./assets/shared/desktop/arrow-right-${theme === 'primary' ? 'black' : 'white'}.svg `} alt="arrow icon" />}
     </button>
   );
 };

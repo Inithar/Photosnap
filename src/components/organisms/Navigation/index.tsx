@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 import styles from './Navigation.module.scss';
-import { links } from '../../../data/layout.json';
+import { navLinks } from '../../../data/layout.json';
 
 import Button from '../../atoms/Button';
 import Wrapper from '../../atoms/Wrapper';
 import useWindowSize from '../../../hooks/useWindowSize';
+import NavLink from '../../atoms/NavLink';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,10 +21,10 @@ const Navigation = () => {
           <img src="./assets/shared/desktop/logo.svg" alt="Photosnap" />
 
           <div className={isOpen ? styles.open : ''}>
-            {links.map(({ to, text }) => (
-              <Link to={to} onClick={handleNavigationChange}>
+            {navLinks.map(({ to, text }) => (
+              <NavLink to={to} onClick={handleNavigationChange} key={crypto.randomUUID()}>
                 {text}
-              </Link>
+              </NavLink>
             ))}
 
             <div className={styles.separator} />
