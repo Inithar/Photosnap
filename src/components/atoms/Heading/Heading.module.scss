@@ -1,0 +1,27 @@
+@mixin heading-size($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+.heading {
+  font-weight: 700;
+  color: var(--pure-black);
+
+  &_light {
+    color: var(--pure-white);
+  }
+
+  &_2 {
+    @include heading-size(3.2rem, 1.25);
+    letter-spacing: 0.33rem;
+    text-transform: uppercase;
+  }
+
+  &_3 {
+    @include heading-size(2.4rem, 1.05);
+  }
+
+  &_4 {
+    @include heading-size(1.8rem, 1.39);
+  }
+}
