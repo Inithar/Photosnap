@@ -1,4 +1,85 @@
-.content {
-  padding: 7.2rem 2.4rem 7.2rem 3.3rem;
+@use '../../../scss/mixins';
+
+.container {
+  & > img {
+    width: 100%;
+  }
+
+  .content {
+    padding: 7.2rem 2.4rem 7.2rem 3.3rem;
+    background-color: var(--pure-white);
+
+    p {
+      margin-top: 1.6rem;
+    }
+
+    button {
+      margin-top: 2.3rem;
+    }
+  }
+
+  @include mixins.breakpoint('sm') {
+    display: flex;
+    max-height: 65rem;
+
+    & > img {
+      width: 35%;
+      align-self: stretch;
+      order: 2;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        margin-top: 2.1rem;
+      }
+
+      button {
+        margin-top: 3.8rem;
+      }
+    }
+  }
+
+  @include mixins.breakpoint('md') {
+    .content {
+      padding: 17.3rem 5.4rem;
+
+      h2 {
+        font-size: 4rem;
+      }
+
+      button {
+        margin-top: 4.8rem;
+      }
+    }
+  }
+
+  @include mixins.breakpoint('lg') {
+    & > img {
+      width: 52.5%;
+    }
+  }
+
+  @include mixins.breakpoint('xl') {
+    & > img {
+      width: 57.5%;
+    }
+  }
+
+  @include mixins.breakpoint('xxl') {
+    .content {
+      padding: 17.3rem 11.2rem;
+    }
+  }
+}
+
+.container_dark .content {
   background-color: var(--pure-black);
+}
+
+.variant_left img {
+  order: initial;
 }

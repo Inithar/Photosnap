@@ -1,22 +1,42 @@
 import styles from './InfoBox.module.scss';
 
+import classNames from 'classnames/bind';
+import useGetImageSrc from '../../../hooks/useGetImageSrc';
+
 import Button from '../../atoms/Button';
 import Text from '../../atoms/Text';
 import Heading from '../../atoms/Heading';
 
-const InfoBox = () => {
+interface InfoBoxProps {
+  theme?: 'dark' | 'light';
+  variant?: 'left' | 'right';
+  src: string;
+  alt: string;
+  heading: string;
+  text: string;
+  btnText: string;
+}
+
+const InfoBox = ({ theme = 'light', variant = 'right', src, alt, heading, text, btnText }: InfoBoxProps) => {
+  const cx = classNames.bind(styles);
+
+  const containerClasses = cx('container', {
+    container_dark: theme === 'dark',
+    variant_left: variant === 'left'
+  });
+
+  const secondaryTheme = theme === 'dark' ? 'light' : 'dark';
+
   return (
-    <div>
-      <div>
-        <img src="./assets/home/mobile/create-and-share.jpg" alt="man with camera on patio" />
-      </div>
+    <div className={containerClasses}>
+      <img src={useGetImageSrc(src)} alt={alt} />
       <div className={styles.content}>
-        <Heading level="2" variant="light">
-          Create and share your photo stories.
+        <Heading level="2" theme={secondaryTheme}>
+          {heading}
         </Heading>
-        <Text variant="light">Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</Text>
-        <Button variant="arrow" theme="secondary">
-          Get an invite
+        <Text theme={secondaryTheme}>{text}</Text>
+        <Button variant="arrow" theme={secondaryTheme}>
+          {btnText}
         </Button>
       </div>
     </div>

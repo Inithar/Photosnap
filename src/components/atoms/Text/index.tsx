@@ -4,14 +4,14 @@ import classNames from 'classnames/bind';
 import styles from './Text.module.scss';
 
 interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
-  variant?: 'dark' | 'light';
+  theme?: 'dark' | 'light';
 }
 
-const Text = ({ children, variant = 'dark', ...props }: TextProps) => {
+const Text = ({ children, theme = 'dark', ...props }: TextProps) => {
   const cx = classNames.bind(styles);
 
   const className = cx(props.className, 'text', {
-    text_light: variant === 'light',
+    text_light: theme === 'light'
   });
 
   return (

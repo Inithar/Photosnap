@@ -14,8 +14,8 @@
   border: none;
   cursor: pointer;
 
-  &_primary,
-  &_secondary {
+  &_dark,
+  &_light {
     padding: 1.2rem 2.4rem;
     transition: background-color 1s, color 1s;
 
@@ -25,18 +25,18 @@
     }
   }
 
-  &_primary {
+  &_dark {
     color: var(--pure-white);
     background-color: var(--pure-black);
   }
 
-  &_secondary {
+  &_light {
     color: var(--pure-black);
     background-color: var(--pure-white);
   }
 
-  &_arrow_primary,
-  &_arrow_secondary {
+  &_arrow_dark,
+  &_arrow_light {
     position: relative;
     display: flex;
     gap: 1.6rem;
@@ -55,11 +55,11 @@
     }
   }
 
-  &_arrow_primary {
+  &_arrow_dark {
     @include btn-arrow-theme(var(--pure-black));
   }
 
-  &_arrow_secondary {
+  &_arrow_light {
     @include btn-arrow-theme(var(--pure-white));
   }
 }

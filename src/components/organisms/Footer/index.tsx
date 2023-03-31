@@ -31,7 +31,7 @@ const Footer = () => (
       </div>
 
       <div className={styles.right_section}>
-        <Button variant="arrow" theme="secondary">
+        <Button variant="arrow" theme="light">
           Get an invite
         </Button>
 
