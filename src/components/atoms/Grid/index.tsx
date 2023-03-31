@@ -32,7 +32,7 @@ const Grid = ({ children, container, item, xs, sm, md, lg, xl, xxl, spacing = 'm
     [`grid_lg_${lg}`]: lg,
     [`grid_xl_${xl}`]: xl,
     [`grid_xxl_${xxl}`]: xxl,
-    [`grid_spacing_${spacing}`]: spacing,
+    // [`grid_spacing_${spacing}`]: spacing,
     [`grid_justify_content_${justifyContent}`]: justifyContent,
     [`grid_align_items_${alignItems}`]: alignItems
   });

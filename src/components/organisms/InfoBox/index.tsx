@@ -29,7 +29,7 @@ const InfoBox = ({ theme = 'light', variant = 'right', src, alt, heading, text, 
 
   return (
     <div className={containerClasses}>
-      <img src={useGetImageSrc(src)} alt={alt} />
+      <img src={useGetImageSrc(src, true)} alt={alt} />
       <div className={styles.content}>
         <Heading level="2" theme={secondaryTheme}>
           {heading}
