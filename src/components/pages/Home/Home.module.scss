@@ -1,3 +1,27 @@
+@use '../../../scss/mixins';
+
 .wrapper {
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51, 0.24);
+}
+
+.features {
+  padding: 8rem 3.3rem;
+
+  & > div:not(:first-child) {
+    margin-top: 5.6rem;
+  }
+
+  @include mixins.breakpoint('md') {
+    padding: 12rem 6rem;
+  }
+
+  @include mixins.breakpoint('lg') {
+    & > div:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+
+  @include mixins.breakpoint('xl') {
+    padding-inline: 16.5rem;
+  }
 }
