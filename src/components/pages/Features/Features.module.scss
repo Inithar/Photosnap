@@ -1,0 +1,40 @@
+@use '../../../scss/mixins';
+
+@mixin gap($y, $x) {
+  margin: -$y -#{$x};
+
+  & > div {
+    padding: $y $x;
+  }
+}
+
+.wrapper {
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51, 0.24);
+}
+
+.features {
+  padding: 6.4rem 3.4rem;
+  @include gap(2.8rem, 0);
+
+  @include mixins.breakpoint('sm') {
+    @include gap(3.6rem, 1rem);
+
+    &_item > div > div {
+      display: flex;
+      align-items: center;
+      height: 7.2rem;
+    }
+  }
+
+  @include mixins.breakpoint('md') {
+    padding: 11.2rem 4rem;
+  }
+
+  @include mixins.breakpoint('lg') {
+    @include gap(5.2rem, 1.5rem);
+  }
+
+  @include mixins.breakpoint('xl') {
+    padding: 16rem 16.5rem;
+  }
+}

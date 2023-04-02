@@ -14,7 +14,7 @@ interface InfoBoxProps {
   alt: string;
   heading: string;
   text: string;
-  btnText: string;
+  btnText?: string;
 }
 
 const InfoBox = ({ theme = 'light', variant = 'right', src, alt, heading, text, btnText }: InfoBoxProps) => {
@@ -35,9 +35,11 @@ const InfoBox = ({ theme = 'light', variant = 'right', src, alt, heading, text, 
           {heading}
         </Heading>
         <Text theme={secondaryTheme}>{text}</Text>
-        <Button variant="arrow" theme={secondaryTheme}>
-          {btnText}
-        </Button>
+        {btnText && (
+          <Button variant="arrow" theme={secondaryTheme}>
+            {btnText}
+          </Button>
+        )}
       </div>
     </div>
   );
