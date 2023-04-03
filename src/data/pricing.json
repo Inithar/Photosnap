@@ -4,5 +4,31 @@
     "alt": "woman with a camera against a beautiful landscape",
     "heading": "Pricing",
     "text": "Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."
-  }
+  },
+  "pricingBoxes": [
+    {
+      "heading": "Basic",
+      "text": "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
+      "price": {
+        "month": "$19.00",
+        "year": "$190.00"
+      }
+    },
+    {
+      "heading": "Pro",
+      "text": "More advanced features available. Recommended for photography veterans and professionals.",
+      "price": {
+        "month": "$39.00",
+        "year": "$390.00"
+      }
+    },
+    {
+      "heading": "Business",
+      "text": "Additional features available such as more detailed metrics. Recommended for business owners.",
+      "price": {
+        "month": "$99.00",
+        "year": "$990.00"
+      }
+    }
+  ]
 }

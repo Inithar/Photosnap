@@ -1,0 +1,93 @@
+@use '../../../scss/mixins';
+
+.box {
+  padding: 5.6rem 3.7rem 4rem;
+  background-color: var(--cultured);
+
+  @include mixins.breakpoint('sm') {
+    padding: 5.6rem 4rem 4rem;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @include mixins.breakpoint('lg') {
+    padding: 4rem;
+
+    & > div {
+      flex-direction: column;
+    }
+  }
+
+  .description {
+    text-align: center;
+
+    p {
+      margin-top: 1.8rem;
+    }
+
+    @include mixins.breakpoint('sm') {
+      max-width: 27rem;
+      text-align: start;
+    }
+
+    @include mixins.breakpoint('lg') {
+      text-align: center;
+    }
+  }
+
+  .price_box {
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--pure-black);
+
+    .price {
+      font-size: 4rem;
+      line-height: 1.2;
+      font-weight: bold;
+      letter-spacing: 0.415rem;
+    }
+
+    .period {
+      font-size: 1.5rem;
+      line-height: 1.66;
+      opacity: 0.6;
+    }
+
+    @include mixins.breakpoint('sm') {
+      margin-top: 0;
+    }
+
+    @include mixins.breakpoint('lg') {
+      margin-top: 4rem;
+    }
+  }
+
+  .dark_price_box {
+    color: var(--pure-white);
+  }
+
+  & > button {
+    margin-top: 4rem;
+    width: 100%;
+
+    @include mixins.breakpoint('sm') {
+      max-width: 27rem;
+    }
+  }
+}
+
+.dark_box {
+  background-color: var(--pure-black);
+}
+
+.bigger_box {
+  @include mixins.breakpoint('lg') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 47rem;
+  }
+}
