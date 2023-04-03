@@ -4,6 +4,7 @@ import useGetImageSrc from '../../../hooks/useGetImageSrc';
 
 import Button from '../../atoms/Button';
 import Heading from '../../atoms/Heading';
+import Shadow from '../../atoms/Shadow';
 
 interface StoryCardProps {
   src: string;
@@ -14,7 +15,7 @@ interface StoryCardProps {
 
 const StoryCard = ({ src, title, author, date }: StoryCardProps) => (
   <div className={styles.card}>
-    <div className={styles.card_shadow} />
+    <Shadow />
     <img src={useGetImageSrc(src)} alt="" />
 
     <div className={styles.card_content}>

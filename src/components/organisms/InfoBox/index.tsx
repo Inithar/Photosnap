@@ -6,6 +6,7 @@ import useGetImageSrc from '../../../hooks/useGetImageSrc';
 import Button from '../../atoms/Button';
 import Text from '../../atoms/Text';
 import Heading from '../../atoms/Heading';
+import Shadow from '../../atoms/Shadow';
 
 interface InfoBoxProps {
   theme?: 'dark' | 'light';
@@ -15,21 +16,26 @@ interface InfoBoxProps {
   heading: string;
   text: string;
   btnText?: string;
+  imgShadow?: boolean;
 }
 
-const InfoBox = ({ theme = 'light', variant = 'right', src, alt, heading, text, btnText }: InfoBoxProps) => {
+const InfoBox = ({ theme = 'light', variant = 'left', src, alt, heading, text, btnText, imgShadow }: InfoBoxProps) => {
   const cx = classNames.bind(styles);
 
   const containerClasses = cx('container', {
     container_dark: theme === 'dark',
-    variant_left: variant === 'left'
+    variant_right: variant === 'right'
   });
 
   const secondaryTheme = theme === 'dark' ? 'light' : 'dark';
 
   return (
     <div className={containerClasses}>
-      <img src={useGetImageSrc(src, true)} alt={alt} />
+      <div className={styles.img_box}>
+        {imgShadow && <Shadow />}
+        <img src={useGetImageSrc(src, true)} alt={alt} />
+      </div>
+      
       <div className={styles.content}>
         <Heading level="2" theme={secondaryTheme}>
           {heading}

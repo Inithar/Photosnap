@@ -5,12 +5,13 @@ import Wrapper from '../../atoms/Wrapper';
 import Grid from '../../atoms/Grid';
 import FeatureBox from '../../molecules/FeatureBox';
 import InfoBox from '../../organisms/InfoBox';
+import Beta from '../../organisms/Beta';
 
 const Features = () => {
   return (
     <Wrapper className={styles.wrapper}>
       <header>
-        <InfoBox {...header} theme="dark" />
+        <InfoBox {...header} theme="dark" variant="right" imgShadow />
       </header>
       <main>
         <section>
@@ -21,6 +22,9 @@ const Features = () => {
               </Grid>
             ))}
           </Grid>
+        </section>
+        <section>
+          <Beta />
         </section>
       </main>
     </Wrapper>

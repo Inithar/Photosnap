@@ -8,6 +8,7 @@ import Heading from '../../atoms/Heading';
 import Text from '../../atoms/Text';
 import Button from '../../atoms/Button';
 import Grid from '../../atoms/Grid';
+import Shadow from '../../atoms/Shadow';
 import StoryCard from '../../molecules/StoryCard';
 
 const { src, heading, mainHeading, createdAt, createdBy, text, btnText } = header;
@@ -16,7 +17,7 @@ const Stories = () => (
   <Wrapper>
     <header className={styles.header}>
       <div className={styles.header_img}>
-        <div className={styles.shadow} />
+        <Shadow />
         <img src={useGetImageSrc(src, true)} />
       </div>
 

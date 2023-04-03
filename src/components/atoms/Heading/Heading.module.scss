@@ -1,3 +1,5 @@
+@use '../../../scss/mixins';
+
 @mixin heading-size($font-size, $line-height) {
   font-size: $font-size;
   line-height: $line-height;
@@ -15,6 +17,11 @@
     @include heading-size(3.2rem, 1.25);
     letter-spacing: 0.33rem;
     text-transform: uppercase;
+
+    @include mixins.breakpoint('md') {
+      @include heading-size(4rem, 1.2);
+      letter-spacing: 0.42rem;
+    }
   }
 
   &_3 {

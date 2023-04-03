@@ -17,7 +17,7 @@ const Home = () => (
     <main>
       <section>
         {infoBoxes.map((data, i) => (
-          <InfoBox {...data} theme={i === 0 ? 'dark' : 'light'} variant={i === 1 ? 'left' : 'right'} key={crypto.randomUUID()} />
+          <InfoBox {...data} theme={i === 0 ? 'dark' : 'light'} variant={i !== 1 ? 'right' : 'left'} key={crypto.randomUUID()} />
         ))}
       </section>
 

@@ -1,0 +1,47 @@
+@use '../../../scss/mixins';
+
+.beta {
+  position: relative;
+
+  & > img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .content {
+    position: relative;
+    padding: 6.4rem 3.2rem;
+    max-width: 60rem;
+    z-index: 2;
+
+    button {
+      margin-top: 2.4rem;
+    }
+  }
+
+  @include mixins.breakpoint('md') {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      padding: 6.8rem 4rem;
+      max-width: initial;
+
+      h2 {
+        max-width: 40rem;
+      }
+
+      button {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include mixins.breakpoint('xl') {
+    .content {
+      padding-inline: 16.5rem;
+    }
+  }
+}
