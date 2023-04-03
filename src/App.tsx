@@ -6,6 +6,7 @@ import Layout from './components/templates/Layout';
 import Home from './components/pages/Home';
 import Stories from './components/pages/Stories';
 import Features from './components/pages/Features';
+import Pricing from './components/pages/Pricing';
 
 const App = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => (
         <Route index element={<Home />} />
         <Route path="stories" element={<Stories />} />
         <Route path="features" element={<Features />} />
+        <Route path="pricing" element={<Pricing />} />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -7,28 +7,26 @@ import FeatureBox from '../../molecules/FeatureBox';
 import InfoBox from '../../organisms/InfoBox';
 import Beta from '../../organisms/Beta';
 
-const Features = () => {
-  return (
-    <Wrapper className={styles.wrapper}>
-      <header>
-        <InfoBox {...header} theme="dark" variant="right" imgShadow />
-      </header>
-      <main>
-        <section>
-          <Grid container className={styles.features}>
-            {features.map(data => (
-              <Grid item xs={12} sm={6} lg={4} key={crypto.randomUUID()} className={styles.features_item}>
-                <FeatureBox {...data} />
-              </Grid>
-            ))}
-          </Grid>
-        </section>
-        <section>
-          <Beta />
-        </section>
-      </main>
-    </Wrapper>
-  );
-};
+const Features = () => (
+  <Wrapper className={styles.wrapper}>
+    <header>
+      <InfoBox {...header} theme="dark" variant="right" imgShadow />
+    </header>
+    <main>
+      <section>
+        <Grid container className={styles.features}>
+          {features.map(data => (
+            <Grid item xs={12} sm={6} lg={4} key={crypto.randomUUID()} className={styles.features_item}>
+              <FeatureBox {...data} />
+            </Grid>
+          ))}
+        </Grid>
+      </section>
+      <section>
+        <Beta />
+      </section>
+    </main>
+  </Wrapper>
+);
 
 export default Features;
