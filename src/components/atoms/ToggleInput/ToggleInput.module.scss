@@ -1,0 +1,40 @@
+.input-field {
+  position: relative;
+  display: inline-block;
+  width: 6.4rem;
+  height: 3.2rem;
+
+  input {
+    appearance: none;
+
+    &:checked + span {
+      background-color: var(--pure-black);
+
+      &::before {
+        background-color: var(--pure-white);
+        transform: translateX(3.25rem);
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    inset: 0;
+    background-color: var(--light-gray);
+    transition: background-color 0.4s;
+    border-radius: 100rem;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0.4rem;
+      bottom: 0.4rem;
+      height: 2.4rem;
+      width: 2.4rem;
+      background-color: var(--pure-black);
+      transition: transform 0.4s, background-color 0.4s;
+      border-radius: 50%;
+    }
+  }
+}
