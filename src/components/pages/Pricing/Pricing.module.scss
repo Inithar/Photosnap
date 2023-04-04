@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6.4rem 2.9rem;
+  padding: 6.4rem 2.9rem 0;
 
   .period {
     display: flex;
@@ -42,6 +42,37 @@
       align-items: center;
       gap: 3rem;
       margin-top: 4.8rem;
+    }
+  }
+
+  @include mixins.breakpoint('md') {
+    padding: 11.2rem 4rem 0;
+  }
+
+  @include mixins.breakpoint('xl') {
+    padding-top: 12rem;
+  }
+}
+
+.compare_table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6.4rem 2.9rem;
+
+  @include mixins.breakpoint('md') {
+    padding: 11.2rem 4rem;
+
+    & > div {
+      margin-top: 6.4rem;
+    }
+  }
+
+  @include mixins.breakpoint('xl') {
+    padding-block: 16rem;
+
+    & > div {
+      margin-top: 5.6rem;
     }
   }
 }

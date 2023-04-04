@@ -30,5 +30,71 @@
         "year": "$990.00"
       }
     }
+  ],
+  "features": [
+    {
+      "feature": "UNLIMITED STORY POSTING",
+      "options": {
+        "basic": true,
+        "pro": true,
+        "business": true
+      }
+    },
+    {
+      "feature": "UNLIMITED PHOTO UPLOAD",
+      "options": {
+        "basic": true,
+        "pro": true,
+        "business": true
+      }
+    },
+    {
+      "feature": "EMBEDDING CUSTOM CONTENT",
+      "options": {
+        "basic": false,
+        "pro": true,
+        "business": true
+      }
+    },
+    {
+      "feature": "CUSTOMIZE METADATA",
+      "options": {
+        "basic": false,
+        "pro": true,
+        "business": true
+      }
+    },
+    {
+      "feature": "ADVANCED METRICS",
+      "options": {
+        "basic": false,
+        "pro": false,
+        "business": true
+      }
+    },
+    {
+      "feature": "PHOTO DOWNLOADS",
+      "options": {
+        "basic": false,
+        "pro": false,
+        "business": true
+      }
+    },
+    {
+      "feature": "SEARCH ENGINE INDEXING",
+      "options": {
+        "basic": false,
+        "pro": false,
+        "business": true
+      }
+    },
+    {
+      "feature": "CUSTOM ANALYTICS",
+      "options": {
+        "basic": false,
+        "pro": false,
+        "business": true
+      }
+    }
   ]
 }

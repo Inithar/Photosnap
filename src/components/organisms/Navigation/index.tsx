@@ -1,16 +1,15 @@
-import { useState } from 'react';
-
 import styles from './Navigation.module.scss';
 import { navLinks } from '../../../data/layout.json';
 
+import { useState } from 'react';
+import useWindowSize from '../../../hooks/useWindowSize';
+
 import Button from '../../atoms/Button';
 import Wrapper from '../../atoms/Wrapper';
-import useWindowSize from '../../../hooks/useWindowSize';
 import NavLink from '../../atoms/NavLink';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const windowWidth = useWindowSize();
 
   const handleNavigationChange = () => setIsOpen(!isOpen);
 
@@ -31,7 +30,7 @@ const Navigation = () => {
             <Button onClick={handleNavigationChange}>Get an invite</Button>
           </div>
 
-          {windowWidth < 768 ? <img src={`./assets/shared/mobile/${isOpen ? 'close' : 'menu'}.svg`} alt="" onClick={handleNavigationChange} /> : <Button>Get an invite</Button>}
+          {useWindowSize() < 768 ? <img src={`./assets/shared/mobile/${isOpen ? 'close' : 'menu'}.svg`} alt="" onClick={handleNavigationChange} /> : <Button>Get an invite</Button>}
         </nav>
       </Wrapper>
     </div>

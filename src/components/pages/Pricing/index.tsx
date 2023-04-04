@@ -2,12 +2,15 @@ import styles from './Pricing.module.scss';
 import { header, pricingBoxes } from '../../../data/pricing.json';
 
 import { useState } from 'react';
+import useWindowSize from '../../../hooks/useWindowSize';
 
 import Wrapper from '../../atoms/Wrapper';
-import InfoBox from '../../organisms/InfoBox';
-import Beta from '../../organisms/Beta';
+import Heading from '../../atoms/Heading';
 import ToggleInput from '../../atoms/ToggleInput';
 import PriceBox from '../../molecules/PriceBox';
+import InfoBox from '../../organisms/InfoBox';
+import Beta from '../../organisms/Beta';
+import CompareTable from '../../organisms/CompareTable';
 
 const Pricing = () => {
   const [period, setPeriod] = useState<'month' | 'year'>('month');
@@ -32,7 +35,10 @@ const Pricing = () => {
           </div>
         </section>
 
-        <section></section>
+        <section className={styles.compare_table}>
+          {useWindowSize() >= 768 && <Heading level="2">Compare</Heading>}
+          <CompareTable />
+        </section>
 
         <section>
           <Beta />

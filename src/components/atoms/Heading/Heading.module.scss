@@ -31,4 +31,8 @@
   &_4 {
     @include heading-size(1.8rem, 1.39);
   }
+
+  &_5 {
+    @include heading-size(1.2rem, 1.33);
+  }
 }
