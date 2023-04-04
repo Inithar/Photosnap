@@ -9,16 +9,14 @@ import Features from './components/pages/Features';
 import Pricing from './components/pages/Pricing';
 
 const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="stories" element={<Stories />} />
-        <Route path="features" element={<Features />} />
-        <Route path="pricing" element={<Pricing />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="stories" element={<Stories />} />
+      <Route path="features" element={<Features />} />
+      <Route path="pricing" element={<Pricing />} />
+    </Route>
+  </Routes>
 );
 
 export default App;

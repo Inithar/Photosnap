@@ -2,6 +2,7 @@ import styles from './Navigation.module.scss';
 import { navLinks } from '../../../data/layout.json';
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import useWindowSize from '../../../hooks/useWindowSize';
 
 import Button from '../../atoms/Button';
@@ -17,7 +18,9 @@ const Navigation = () => {
     <div className={styles.container}>
       <Wrapper>
         <nav className={styles.nav}>
-          <img src="./assets/shared/desktop/logo.svg" alt="Photosnap" />
+          <Link to="/" onClick={handleNavigationChange}>
+            <img src="./assets/shared/desktop/logo.svg" alt="Photosnap" />
+          </Link>
 
           <div className={isOpen ? styles.open : ''}>
             {navLinks.map(({ to, text }) => (
