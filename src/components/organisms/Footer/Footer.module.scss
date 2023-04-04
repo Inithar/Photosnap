@@ -1,6 +1,8 @@
 @use '../../../scss/mixins';
 
 .footer {
+  display: flex;
+  justify-content: center;
   background-color: var(--pure-black);
 
   & > div {
@@ -8,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     padding: 5.6rem 3.2rem;
+    width: 100%;
     max-width: 119rem;
 
     @include mixins.breakpoint('sm') {
