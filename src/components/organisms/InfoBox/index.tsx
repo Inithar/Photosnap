@@ -23,7 +23,7 @@ const InfoBox = ({ theme = 'light', variant = 'left', src, alt, heading, text, b
   const cx = classNames.bind(styles);
 
   const containerClasses = cx('container', {
-    container_dark: theme === 'dark',
+    dark_container: theme === 'dark',
     variant_right: variant === 'right'
   });
 
@@ -35,7 +35,7 @@ const InfoBox = ({ theme = 'light', variant = 'left', src, alt, heading, text, b
         {imgShadow && <Shadow />}
         <img src={useGetImageSrc(src, true)} alt={alt} />
       </div>
-      
+
       <div className={styles.content}>
         <Heading level="2" theme={secondaryTheme}>
           {heading}

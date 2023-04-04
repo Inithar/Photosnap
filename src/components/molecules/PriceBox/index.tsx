@@ -8,7 +8,7 @@ import classNames from 'classnames/bind';
 interface PriceBoxProps {
   theme?: 'dark' | 'light';
   period: 'month' | 'year';
-  bigger?: boolean;
+  main?: boolean;
   heading: string;
   text: string;
   price: {
@@ -17,14 +17,14 @@ interface PriceBoxProps {
   };
 }
 
-const PriceBox = ({ heading, text, price, theme = 'light', bigger, period }: PriceBoxProps) => {
+const PriceBox = ({ heading, text, price, theme = 'light', main, period }: PriceBoxProps) => {
   const secondaryTheme = theme === 'dark' ? 'light' : 'dark';
 
   const cx = classNames.bind(styles);
 
   const boxClassNames = cx('box', {
     dark_box: theme === 'dark',
-    bigger_box: bigger
+    main_box: main
   });
 
   const priceBoxClassNames = cx('price_box', {

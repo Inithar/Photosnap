@@ -11,13 +11,16 @@
     align-items: center;
     padding: 5.6rem 3.2rem;
     width: 100%;
-    max-width: 119rem;
 
     @include mixins.breakpoint('sm') {
       flex-direction: row;
       justify-content: space-between;
       align-items: stretch;
       padding: 6.4rem 4rem;
+    }
+
+    @include mixins.breakpoint('xl') {
+      padding-inline: 16.5rem;
     }
   }
 }

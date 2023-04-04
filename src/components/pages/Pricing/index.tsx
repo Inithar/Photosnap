@@ -30,7 +30,7 @@ const Pricing = () => {
 
           <div className={styles.pricing_boxes}>
             {pricingBoxes.map((data, i) => (
-              <PriceBox {...data} period={period} theme={i === 1 ? 'dark' : 'light'} bigger={i === 1} key={crypto.randomUUID()} />
+              <PriceBox {...data} period={period} theme={i === 1 ? 'dark' : 'light'} main={i === 1} key={crypto.randomUUID()} />
             ))}
           </div>
         </section>
