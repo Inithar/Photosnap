@@ -23,9 +23,9 @@ const Home = () => (
 
       <section>
         <Grid container>
-          {storyCards.slice(0, 4).map(data => (
+          {storyCards.slice(0, 4).map(({ src, title, author }) => (
             <Grid item xs={12} sm={6} lg={3} key={crypto.randomUUID()}>
-              <StoryCard {...data} />
+              <StoryCard src={src} title={title} author={author} />
             </Grid>
           ))}
         </Grid>

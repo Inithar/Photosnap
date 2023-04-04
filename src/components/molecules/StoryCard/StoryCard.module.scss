@@ -3,6 +3,8 @@
 .card {
   position: relative;
   height: 37.5rem;
+  transition: transform 0.3s;
+  cursor: pointer;
 
   & > img {
     position: absolute;
@@ -36,9 +38,17 @@
       background-color: var(--pure-white);
       opacity: 0.25;
     }
+
+    h4 {
+      margin-top: 0.4rem;
+    }
   }
 
   @include mixins.breakpoint('md') {
     height: 50rem;
+  }
+
+  &:hover {
+    transform: translateY(-2.4rem);
   }
 }

@@ -10,7 +10,7 @@ interface StoryCardProps {
   src: string;
   title: string;
   author: string;
-  date: string;
+  date?: string;
 }
 
 const StoryCard = ({ src, title, author, date }: StoryCardProps) => (
@@ -19,6 +19,7 @@ const StoryCard = ({ src, title, author, date }: StoryCardProps) => (
     <img src={useGetImageSrc(src)} alt="" />
 
     <div className={styles.card_content}>
+      {date && <p>{date}</p>}
       <Heading level="4" theme="light">
         {title}
       </Heading>
