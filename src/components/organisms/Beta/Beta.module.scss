@@ -29,6 +29,7 @@
 
     button {
       margin-top: 2.4rem;
+      height: fit-content;
     }
   }
 
@@ -42,6 +43,7 @@
     .content {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 6.8rem 4rem;
       max-width: initial;
 
