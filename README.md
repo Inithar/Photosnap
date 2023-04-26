@@ -25,11 +25,17 @@ Design imported from [frontendmentor/photosnap](https://www.frontendmentor.io/ch
 
 ## Screenshots
 
-![zvkqvpshdas9rtdkubkx](https://user-images.githubusercontent.com/72702964/234599020-3602bd72-3734-400b-a8a3-f3110572d372.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/72702964/234599020-3602bd72-3734-400b-a8a3-f3110572d372.png" alt="home page">
+</p>
 
-![pbdzyfy546b6jlzqrkjb](https://user-images.githubusercontent.com/72702964/234598708-edacd7b8-8915-440a-9bc0-62465d1eb68e.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/72702964/234598708-edacd7b8-8915-440a-9bc0-62465d1eb68e.png" alt="inner pages">
+</p>
 
-![vgki5snipvebjuebvvuo](https://user-images.githubusercontent.com/72702964/234599200-aff5cad1-78d3-4a57-8fe6-4f38600d5ce9.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/72702964/234599200-aff5cad1-78d3-4a57-8fe6-4f38600d5ce9.png" alt="mobile view">
+</p>
 
 ## Contact
 
